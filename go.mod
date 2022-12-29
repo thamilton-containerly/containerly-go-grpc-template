@@ -1,4 +1,4 @@
-module containerly-go-grpc-template
+module {{ $base }}
 
 go 1.19
 

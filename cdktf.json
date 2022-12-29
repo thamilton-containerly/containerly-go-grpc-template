@@ -1,6 +1,6 @@
 {
   "language": "go",
-  "app": "",
+  "app": "{{ $base }}",
   "codeMakerOutput": "",
   "projectId": "",
   "sendCrashReports": "false",
