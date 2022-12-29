@@ -3,4 +3,4 @@
 protoc \
   --go_out=./rpc \
   --go-grpc_out=./rpc \
-  proto/{{ $base }}.proto
+  proto/containerly.proto
