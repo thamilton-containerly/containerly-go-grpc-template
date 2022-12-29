@@ -28,6 +28,6 @@ RUN apk add --no-cache ca-certificates
 COPY --from=builder /app/{{ $base }} /usr/local/bin/{{ $base }}
 
 # Run the web service on container startup.
-ENTRYPOINT ["/{{ $base }}"]
+ENTRYPOINT ["/usr/local/bin/{{ $base }}"]
 
 CMD ["start"]
