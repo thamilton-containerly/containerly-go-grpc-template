@@ -16,7 +16,7 @@ COPY . ./
 
 # Build the binary.
 # -mod=readonly ensures immutable go.mod and go.sum in container builds.
-RUN CGO_ENABLED=0 GOOS=linux go build -mod=readonly -v -o server ./cmd/server
+RUN CGO_ENABLED=0 GOOS=linux go build -mod=readonly -v -o {{ $base }} ./cmd/{{ $base }}
 
 # Use the official Alpine image for a lean production container.
 # https://hub.docker.com/_/alpine
@@ -28,4 +28,4 @@ RUN apk add --no-cache ca-certificates
 COPY --from=builder /app/server /server
 
 # Run the web service on container startup.
-ENTRYPOINT ["/server", "start"]
+ENTRYPOINT ["/{{ $base }}", "start"]
