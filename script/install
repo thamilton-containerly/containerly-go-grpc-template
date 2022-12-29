@@ -4,3 +4,5 @@ set -e
 
 go build ./cmd/{{ $base }}
 sudo mv {{ $base }} /usr/local/bin/{{ $base }}
+
+/opt/homebrew/bin/cdktf deploy development --app=containerly-sdk --output=cdktf.out --auto-approve=true -lock=false --path=""
