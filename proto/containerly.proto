@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package {{ $base }};
+package containerly;
 
-option go_package = ".;{{ $base }}";
+option go_package = ".;containerly";
 
-service {{ $base }} {
+service Containerly {
   rpc Service(Request) returns (Response);
 }
 
