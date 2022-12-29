@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package containerly;
+
+option go_package = ".;containerly";
+
+service Containerly {
+  rpc Service(Request) returns (Response);
+}
+
+message Request {
+  string Message = 1;
+}
+
+message Response {
+  string Message = 1;
+}
