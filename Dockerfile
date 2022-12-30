@@ -29,5 +29,3 @@ COPY --from=builder /app/{{ $base }} /usr/local/bin/{{ $base }}
 
 # Run the web service on container startup.
 ENTRYPOINT ["/usr/local/bin/{{ $base }}"]
-
-CMD ["start"]
